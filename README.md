@@ -3,7 +3,7 @@
 This repository documents the generation procedure of the dataset used in  
 **Targeted Exploration of Ten-Million Catalyst Candidates for Methane Conversion via Distributed Generative Transformers.**
 
-The dataset consists of large-scale generated catalyst surface structures produced by a Transformer-based generative model.
+Generated catalyst surface structures produced by this model are provided in 
 
 ---
 
@@ -44,6 +44,31 @@ Once a trained or fine-tuned model checkpoint is available, catalyst structures 
 ### Generation Script
 
 Structure generation is performed using the `script/generate_gpu.py`
+
+The output is a serialized .pkl file containing generated token sequences.
+At this stage, no decoding, filtering, or geometry relaxation is applied.
+
+## Decoding and Conversion to XYZ Format
+
+The generated .pkl files are converted into readable atomistic structures using: `script/transfer_xyz.py` 
+
+This script decodes token sequences and writes valid structures into simple XYZ files.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
