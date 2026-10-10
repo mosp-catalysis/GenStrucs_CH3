@@ -12,7 +12,7 @@ This repository is an adapted CH3 inference distribution, not an original
 implementation of CatGPT or an official upstream CatGPT release. Training and
 fine-tuning methodology should be obtained from the original authors' work.
 The base and CH3-adapter files linked in the README are distributed by
-RileyLi911; this is not a claim that they are the original authors' official
+our group; this is not a claim that they are the original authors' official
 checkpoint release.
 
 The immediate source for this bundle is
