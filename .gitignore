@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+.cache/
+.env
+outputs/
+checkpoint-GPT-2M/
+data/finetune_model/
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.pkl
+*.zip

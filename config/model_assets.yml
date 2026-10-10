@@ -1,0 +1,28 @@
+model_assets:
+  repo_id: RileyLi911/autocata-models
+  repo_type: model
+  revision: 3ae5ea6c131efae80cbe3ce8ec29aa9e653983bb
+  local_dir: .
+  required_paths:
+    - checkpoint-GPT-2M/checkpoint-138890/config.json
+    - checkpoint-GPT-2M/checkpoint-138890/model.safetensors
+    - checkpoint-GPT-2M/checkpoint-138890/tokenizer.json
+    - checkpoint-GPT-2M/checkpoint-138890/tokenizer_config.json
+    - checkpoint-GPT-2M/checkpoint-138890/special_tokens_map.json
+    - data/finetune_model/checkpoint-CH3/adapter_config.json
+    - data/finetune_model/checkpoint-CH3/adapter_model.safetensors
+    - data/finetune_model/checkpoint-CH3/tokenizer.json
+    - data/finetune_model/checkpoint-CH3/tokenizer_config.json
+    - data/finetune_model/checkpoint-CH3/special_tokens_map.json
+  allow_patterns:
+    - checkpoint-GPT-2M/checkpoint-138890/config.json
+    - checkpoint-GPT-2M/checkpoint-138890/generation_config.json
+    - checkpoint-GPT-2M/checkpoint-138890/model.safetensors
+    - checkpoint-GPT-2M/checkpoint-138890/tokenizer.json
+    - checkpoint-GPT-2M/checkpoint-138890/tokenizer_config.json
+    - checkpoint-GPT-2M/checkpoint-138890/special_tokens_map.json
+    - data/finetune_model/checkpoint-CH3/adapter_config.json
+    - data/finetune_model/checkpoint-CH3/adapter_model.safetensors
+    - data/finetune_model/checkpoint-CH3/tokenizer.json
+    - data/finetune_model/checkpoint-CH3/tokenizer_config.json
+    - data/finetune_model/checkpoint-CH3/special_tokens_map.json

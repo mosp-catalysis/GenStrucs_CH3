@@ -1,0 +1,15 @@
+# Generation/decoding subset of AutoCata's environment; no OC20/PyG needed.
+torch==2.4.0
+transformers==4.51.3
+peft==0.8.2
+numpy==1.24.4
+scipy==1.11.4
+pandas==2.2.3
+pymatgen==2023.11.12
+ase==3.22.1
+omegaconf==2.3.0
+huggingface-hub>=0.30,<1.0
+safetensors>=0.4.3,<0.6
+accelerate>=0.26,<1.0
+tqdm>=4.66,<5
+PyYAML>=6,<7

@@ -1,0 +1,21 @@
+experiment:
+  adsorbate: CH3
+  name_template: genstrucs-{adsorbate}
+paths:
+  output_dir_template: outputs/{adsorbate}
+  generation_dir_name: generated
+  analysis_dir_name: analysis
+generation:
+  n_generation: 5
+  batch_size_cpu: 1
+  batch_size_cuda: 8
+  top_k: 30
+  top_p: 0.9
+  temperature: 1.0
+  dtype: int32
+model_params:
+  name: genstrucs-CH3
+  checkpoint_path: checkpoint-GPT-2M/checkpoint-138890
+data_params:
+  string_type: coordinate
+  max_len: 1024
