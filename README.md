@@ -6,13 +6,24 @@ This standalone inference package is extracted from
 [AutoCata](https://github.com/RileyLi911/autocata) for
 [GenStrucs_CH3](https://github.com/mosp-catalysis/GenStrucs_CH3).
 
-**The original framework and underlying code originate from
-[CatGPT](https://github.com/SeoinBack/CatGPT), by Dong Hyeon Mok and Seoin Back.**
-Please credit and cite their [original work](https://arxiv.org/abs/2407.14040).
-This repository adds CH3 inference packaging, adapter loading, configuration,
-model-download instructions and XYZ indexing. See [ATTRIBUTION.md](ATTRIBUTION.md)
-for provenance, citation and upstream licensing status. Training is not
-reimplemented here; refer to CatGPT for training/fine-tuning methods.
+**Both the base model and the CH3 adapter provided here were trained by
+this project's author, RileyLi911.** The base model was pretrained from
+scratch, and CH3 fine-tuning, subsequent structure generation and screening
+were performed by the project author using modified CatGPT-based code.
+No pretrained weights supplied by the CatGPT authors were used.
+
+The model architecture, structure representation and reused portions of code
+are based on [CatGPT](https://github.com/SeoinBack/CatGPT), by Dong Hyeon Mok
+and Seoin Back. Please credit and cite their
+[original work](https://arxiv.org/abs/2407.14040) for those contributions.
+This code/method attribution is separate from the provenance of this project's
+trained model weights and downstream research.
+
+This repository distributes the inference portion of the author's work:
+generation, adapter loading, model downloading, XYZ conversion and indexing.
+The author's training and downstream screening workflows are not included in
+this inference package. See [ATTRIBUTION.md](ATTRIBUTION.md) for the detailed
+division of contributions and source provenance.
 
 ## 1. Install
 
@@ -31,9 +42,17 @@ driver. This bundle does not install drivers or a distributed runtime.
 
 ## 2. Download the models
 
-The model files are publicly hosted at:
+Our group provides the author-trained model files through the repository
+maintained by RileyLi911:
 
 **https://huggingface.co/RileyLi911/autocata-models**
+
+| Asset | Training provenance |
+| --- | --- |
+| `checkpoint-GPT-2M/checkpoint-138890` | Base model pretrained **from scratch by RileyLi911** using modified CatGPT-based code |
+| `data/finetune_model/checkpoint-CH3` | CH3 LoRA adapter **fine-tuned by RileyLi911** on that self-trained base |
+
+These are this project's trained weights, not weights released by CatGPT.
 
 The included manifest pins revision
 `3ae5ea6c131efae80cbe3ce8ec29aa9e653983bb` and downloads only the base model,

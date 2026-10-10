@@ -8,12 +8,26 @@ and related generation/decoding utilities are based on **CatGPT**, by
 - Paper: https://arxiv.org/abs/2407.14040
 - Related journal DOI: https://doi.org/10.1021/jacs.4c11504
 
-This repository is an adapted CH3 inference distribution, not an original
-implementation of CatGPT or an official upstream CatGPT release. Training and
-fine-tuning methodology should be obtained from the original authors' work.
-The base and CH3-adapter files linked in the README are distributed by
-our group; this is not a claim that they are the original authors' official
-checkpoint release.
+The project author, **RileyLi911**, adapted the CatGPT code and carried out
+the model training and subsequent research workflow:
+
+- **Base pretraining:** `checkpoint-GPT-2M/checkpoint-138890` was trained from
+  scratch by RileyLi911. It was not initialized from a CatGPT-author-provided
+  pretrained checkpoint.
+- **CH3 fine-tuning:** `data/finetune_model/checkpoint-CH3` was trained by
+  RileyLi911 as a LoRA adapter on the self-trained base model.
+- **Downstream work:** structure generation, screening and associated code
+  modifications were carried out by the project author.
+- **Weight distribution:** our group provides these author-trained model
+  weights through the linked Hugging Face repository maintained by RileyLi911.
+  RileyLi911 performed their training; our group is not redistributing
+  CatGPT-author-provided weights.
+
+CatGPT is credited for the original architecture, methods and reused code.
+That attribution does not assign this project's training, checkpoints or
+downstream screening work to the CatGPT authors. This repository packages the
+inference portion of RileyLi911's work; it does not include the full training
+or screening workflows and is not an official CatGPT release.
 
 The immediate source for this bundle is
 https://github.com/RileyLi911/autocata at commit
@@ -31,10 +45,12 @@ https://github.com/RileyLi911/autocata at commit
 
 The upstream repository inspected on 2026-10-10 at commit
 `58c00ba835a92623e2140b42e9b17f11fb869011` had no standalone LICENSE/COPYING
-file in its tree. No replacement license for upstream code or model weights
-is asserted here. Retain attribution and check applicable upstream/model
-permissions before redistribution. A paper's license is not automatically a
-software or model license.
+file in its tree. This observation concerns the reused upstream code, not
+the training provenance of RileyLi911's model weights. No replacement license
+for upstream code is asserted here. Retain upstream code attribution; terms
+for this project's author-trained weights must be stated separately by the
+project author. A paper's license is not automatically a software or model
+license.
 
 Suggested citation for the original work:
 
